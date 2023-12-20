@@ -1,9 +1,15 @@
 ﻿namespace Store.Domain.Entities;
 
-public class Discount(decimal amount, DateTime expireDate) : Entity
+public class Discount : Entity
 {
-    public decimal Amount { get; private set; } = amount;
-    public DateTime ExpireDate { get; private set; } = expireDate;
+    public Discount(decimal amount, DateTime expireDate)
+    {
+        Amount = amount;
+        ExpireDate = expireDate;
+    }
+
+    public decimal Amount { get; private set; }
+    public DateTime ExpireDate { get; private set; }
 
     public bool IsValid() =>
         DateTime.Compare(DateTime.Now, ExpireDate) < 0;
