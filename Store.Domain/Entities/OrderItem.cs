@@ -8,7 +8,7 @@ public class OrderItem : Entity
     {
         AddNotifications(new Contract<OrderItem>()
             .Requires()
-            .IsNotNull(Product, nameof(Product), "Produto inválido")
+            .IsNotNull(product, nameof(Product), "Produto inválido")
             .IsGreaterThan(quantity, 0, nameof(Quantity), "A quantidade deve ser maior do que zero")
         );
 

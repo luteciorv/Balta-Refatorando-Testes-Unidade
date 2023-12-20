@@ -16,6 +16,7 @@ public class Order : Entity
         Date = DateTime.Now;
         Number = Guid.NewGuid().ToString()[..8];
         Status = EOrderStatus.WaitingPayment;
+        DeliveryFee = deliveryFee;
         Discount = discount;
         Items = [];
     }
