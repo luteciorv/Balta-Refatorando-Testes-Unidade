@@ -1,4 +1,4 @@
-﻿namespace Store.Domain.Interfaces;
+﻿namespace Store.Domain.Commands.Interfaces;
 
 public interface ICommand
 {
