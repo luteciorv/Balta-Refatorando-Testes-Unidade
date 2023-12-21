@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Store.Domain.Entities;
 
-namespace Store.Domain.Repositories
+namespace Store.Domain.Repositories;
+
+public interface ICustomerRepository
 {
-    internal interface ICustomerRepository
-    {
-    }
+    Customer Get(string document);
 }
